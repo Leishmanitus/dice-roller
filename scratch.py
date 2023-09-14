@@ -1,8 +1,8 @@
 
-# from blocks.dice import Dice
-# from blocks.cup import Cup
-from blocks.weapon import Weapon
-from blocks.character import Character
+# from classes import Dice
+# from classes import Cup
+from classes import Weapon
+from classes import Character
 
 steve = Character('Steve')
 steve.change_weapon('battleaxe')

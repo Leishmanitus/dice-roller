@@ -1,7 +1,7 @@
 
-# from blocks.item_configs import ItemConfigs
-from blocks.dice import Dice
-# from blocks.weapon import Weapon
+# from .item_configs import ItemConfigs
+from .dice import Dice
+# from .weapon import Weapon
 
 class Actions:
 	'''handles all possible actions an adventurer can make'''

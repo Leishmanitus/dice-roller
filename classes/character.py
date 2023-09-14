@@ -1,15 +1,15 @@
 
-from blocks.item_configs import ItemConfigs
-# from blocks.dice import Dice
-from blocks.actions import Actions
-from blocks.weapon import Weapon
-from blocks.armor import Armor
-#from blocks.shield import Shield
-from blocks.abilityscore import AbilityScore
+from .item_configs import ItemConfigs
+from .dice import Dice
+from .actions import Actions
+from .weapon import Weapon
+from .armor import Armor
+# from .shield import Shield
+from .abilityscore import AbilityScore
 
 class Character:
 	'''creates a new character for a DnD style game'''
-	config = ItemConfigs('./blocks/data/weapons.ini')
+	config = ItemConfigs('./classes/data/weapons.ini')
 	experience_guide = {
 		1:[0,2], 2:[300,2], 3:[900,2], 4:[2700,2],
 		5:[6500,3], 6:[14000,3], 7:[23000,3],

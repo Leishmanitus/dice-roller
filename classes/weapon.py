@@ -1,13 +1,13 @@
 
 from os import path
 from dataclasses import dataclass
-from blocks.item_configs import ItemConfigs
-from blocks.dice import Dice
+from .item_configs import ItemConfigs
+from .dice import Dice
 
 @dataclass
 class Weapon:
 	'''creates an object representing a weapon'''
-	config = ItemConfigs('./blocks/data/weapons.ini').config
+	config = ItemConfigs('./classes/data/weapons.ini').config
 	def __init__(self, attribute:int=0, name:str='fist'):
 		self.name = name
 		self.mod = attribute
@@ -30,9 +30,10 @@ class Weapon:
 
 #checks for a weapons.ini file
 #if none exists it creates a new file
+#should probably move this out of weapon.py
 	def restore_default_weapons(self):
 		'''If the weapons.ini file does not exist then a new one will be created'''
-		if not path.exists('./blocks/data/weapons.ini'):
+		if not path.exists('./classes/data/weapons.ini'):
 			self.config.add_section('dagger')
 			self.config['dagger'] = {
 				'light': 'True',
@@ -327,5 +328,5 @@ class Weapon:
 				'damage2': '1d6',
 				'range': 'None'
 			}
-			with open('./blocks/data/weapons.ini', 'w') as file:
+			with open('./classes/data/weapons.ini', 'w') as file:
 				self.config.write(file)

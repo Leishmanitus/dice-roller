@@ -1,11 +1,11 @@
 
-from blocks.item_configs import ItemConfigs
+from .item_configs import ItemConfigs
 from dataclasses import dataclass
 
 @dataclass
 class Armor:
 	'''grabs an armor item from an .ini file'''
-	configs = ItemConfigs('./blocks/data/armors.ini')
+	configs = ItemConfigs('./classes/data/armors.ini')
 	def __init__(self,
 	name:str='unarmored',
 	mod:int=0,

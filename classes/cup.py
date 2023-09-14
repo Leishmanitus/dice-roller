@@ -1,5 +1,5 @@
 
-from blocks.dice import Dice
+from .dice import Dice
 
 class Cup(list):
 	'''Designed to handle many Dice objects. Use add_to and remove_from to manage stack.'''
